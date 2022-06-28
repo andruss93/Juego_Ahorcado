@@ -3,7 +3,7 @@ const inicio = document.getElementById('inicio')
 const palabrasUsadas = document.getElementById('letras-usadas')
 const palabras =['casa','perro','gato','elefante']
 const agregarPalabra = document.getElementById('agregar-palabra')
-
+const inputPalabra = document.getElementById('nuevaPalabra')
 
 
 let seleccionarPalabra
@@ -51,8 +51,6 @@ const letraIncorrecta = () => {
 }
 
 
-
-
 const letraInput = letter =>{
     if(seleccionarPalabra.includes(letter)){
         letraCorrecta (letter)
@@ -88,12 +86,6 @@ const palabraAleatoria = ()=>{
     seleccionarPalabra = palabra.split ('')
 }
 
-
-
-
-
-
-
 const IniciarJuego = () =>{
     usarLetra = []
     errores = 0
@@ -102,10 +94,19 @@ const IniciarJuego = () =>{
     palabrasUsadas.innerHTML = ''
     inicio.style.display ='none'
     agregarPalabra.style.display ='none'
+    inputPalabra.style.display="none"
     dibujarAhorcado ()
     palabraAleatoria ()
     dibujarPalabra ()
     document.addEventListener('keydown',LetraEvento)
 }
 
+function agregarPalabras () {
+    let palabraCapturar = document.getElementById('nuevaPalabra').value
+    palabraCapturar = palabras.push(palabraCapturar)
+    alert (palabras)
+}
+
 inicio.addEventListener('click',IniciarJuego)
+
+agregarPalabra.addEventListener('click',agregarPalabras)
