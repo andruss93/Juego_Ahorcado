@@ -2,7 +2,7 @@ const contenedorDePalabra = document.getElementById ('contenedor-palabras')
 const inicio = document.getElementById('inicio')
 const palabrasUsadas = document.getElementById('letras-usadas')
 const palabras =['casa','perro','gato','elefante']
-
+const agregarPalabra = document.getElementById('agregar-palabra')
 
 
 
@@ -34,15 +34,20 @@ const letraCorrecta = letter => {
             aciertos++
         }
     }
-    if (aciertos === seleccionarPalabra.length) finJuego ()
+    if (aciertos === seleccionarPalabra.length){        
+        finJuego ()
+        alert ("Ganaste... felicidades...!!!")
+    }
+    
 }
 
 
 const letraIncorrecta = () => {
     addBodyPart (bodyParts[errores])
     errores++
-    if(errores === bodyParts.length) finJuego()
-
+    if(errores === bodyParts.length){
+    alert ('Haz perdido')
+    finJuego()}
 }
 
 
@@ -96,6 +101,7 @@ const IniciarJuego = () =>{
     contenedorDePalabra.innerHTML = ''
     palabrasUsadas.innerHTML = ''
     inicio.style.display ='none'
+    agregarPalabra.style.display ='none'
     dibujarAhorcado ()
     palabraAleatoria ()
     dibujarPalabra ()
