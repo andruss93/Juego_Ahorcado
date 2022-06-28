@@ -1,0 +1,28 @@
+body{
+    background-color: lightgrey;
+}
+
+.hidden{
+    color: transparent;
+}
+
+#contenedor-palabras{
+    margin-top: 20px;
+}
+
+.letter{
+    margin: 0 7px;
+    position: relative;
+    text-align: center;
+}
+
+.letter::after{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    min-width: 12px;
+}
