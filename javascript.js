@@ -1,7 +1,7 @@
 const contenedorDePalabra = document.getElementById ('contenedor-palabras')
 const inicio = document.getElementById('inicio')
 const palabrasUsadas = document.getElementById('letras-usadas')
-const palabras =['casa','perro','gato','elefante']
+const palabras =['alura','web','programacion','javascript','html','canva','diseño','css','oracle','estudiante']
 const agregarPalabra = document.getElementById('agregar-palabra')
 const inputPalabra = document.getElementById('nuevaPalabra')
 
