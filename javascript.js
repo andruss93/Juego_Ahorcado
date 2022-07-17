@@ -25,13 +25,13 @@ const letraIncorrecta = () => {
     alert ('Haz perdido la palabra era ' + seleccionarPalabra)
     finJuego()
 }
-
+}
 
 const finJuego = () => {
     document.removeEventListener('keydown',letraEvento)
-    inicio.style.display ='block'
+    inicio.style.display = 'block'
 }
-}
+
 
 
 
@@ -45,18 +45,18 @@ const letraCorrecta = letter => {
     }
     if (aciertos === seleccionarPalabra.length){
         alert('haz ganado la palabra era' + seleccionarPalabra)       
-        finJuego ()
+        finJuego()
     }
     
 }
 
-const letraInput = letter =>{
+const letraInput = letter => {
     if(seleccionarPalabra.includes(letter)){
         letraCorrecta (letter)
     } else {
         letraIncorrecta ()
     }
-    adiccionarLetra (letter)
+    adiccionarLetra(letter)
     usarLetra.push(letter)
 }
 
