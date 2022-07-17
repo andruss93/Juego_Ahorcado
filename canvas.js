@@ -19,9 +19,9 @@ const addBodyPart = bodyPart => {
 }
 
 function dibujarAhorcado (){
-    ctx.canvas.width = 1200
-    ctx.canvas.height = 860
-    ctx.scale (50,50)
+    ctx.canvas.width = 400
+    ctx.canvas.height = 400
+    ctx.scale (40,40)
     ctx.clearRect(0,0, canvas.width, canvas.height)
     ctx.fillStyle = 'black'
     ctx.fillRect (0,7,4,1)

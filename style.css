@@ -9,8 +9,14 @@ body{
     color: transparent;
 }
 
+
+
 #contenedor-palabras{
-    margin-top: 20px;
+    margin-top: 1px;
+    left: 200px;
+    color: blue;
+    position: relative;
+
 }
 
 footer{
@@ -21,10 +27,12 @@ footer{
     left: 1200px;
 }
 
+
+
 .letter{
-    margin: 0 7px;
+    margin: 0 40px;
     position: relative;
-    text-align: center;
+    text-align:center;
 }
 
 #inicio {
@@ -34,16 +42,16 @@ footer{
     position: absolute;
     padding: 24px;
     border-radius: 24px;
-    width: 160px;
+    width: px;
     height: 32px;
-    left: 100px;
-    top: 450px;
+    left: 200px;
+    top: 550px;
     gap: 8px;
     color: azure;
     border: 1px,solid lightblue;
     size: 16px;
     font-family: 'Arial';
-    font-style:normal;
+    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     align-items: center;
@@ -75,14 +83,15 @@ footer{
 }
 
 .letter::after{
-    content: ' ';
+    content:" ";
     display: block;
     position: absolute;
     left: 0;
     width: 100%;
-    height: 1px;
-    background-color: black;
-    min-width: 12px;
+    height: 2px;
+    background-color: blue;
+    min-width: 20px;
+    text-align: center;
 }
 
 #nuevaPalabra{
