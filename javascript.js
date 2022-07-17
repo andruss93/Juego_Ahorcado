@@ -18,38 +18,37 @@ const adiccionarLetra = letter => {
     palabrasUsadas.appendChild(letterElement)
     
 }
+const letraIncorrecta = () => {
+    addBodyPart (bodyParts[errores])
+    errores++
+    if(errores === bodyParts.length){
+    alert ('Haz perdido la palabra era ' + seleccionarPalabra)
+    finJuego()
+}
+
 
 const finJuego = () => {
-    document.removeEventListener('keydown',LetraEvento)
+    document.removeEventListener('keydown',letraEvento)
     inicio.style.display ='block'
+}
 }
 
 
 
 const letraCorrecta = letter => {
     const {children} = contenedorDePalabra
-    for (var i = 0; i<children.length;i++){
+    for (var i = 0; i < children.length;i++){
         if (children[i].innerHTML === letter){ 
             children[i].classList.toggle('hidden')
             aciertos++
         }
     }
-    if (aciertos === seleccionarPalabra.length){        
+    if (aciertos === seleccionarPalabra.length){
+        alert('haz ganado la palabra era' + seleccionarPalabra)       
         finJuego ()
-        alert ("Ganaste... felicidades...!!!")
     }
     
 }
-
-
-const letraIncorrecta = () => {
-    addBodyPart (bodyParts[errores])
-    errores++
-    if(errores === bodyParts.length){
-    alert ('Haz perdido')
-    finJuego()}
-}
-
 
 const letraInput = letter =>{
     if(seleccionarPalabra.includes(letter)){
@@ -58,18 +57,18 @@ const letraInput = letter =>{
         letraIncorrecta ()
     }
     adiccionarLetra (letter)
+    usarLetra.push(letter)
 }
 
-const LetraEvento = event=>{
+const letraEvento = event=>{
     let nuevaLetra = event.key.toUpperCase()
-    if(nuevaLetra.match(/^[a-zñ]$/i)&& !usarLetra.includes(nuevaLetra)){
+    if(nuevaLetra.match(/^[a-zñ]$/i) && !usarLetra.includes(nuevaLetra)){
         letraInput(nuevaLetra)
     }
-
 }
 
 const dibujarPalabra = () =>{
-    seleccionarPalabra.forEach(letter=> {
+    seleccionarPalabra.forEach(letter => {
         const letterElement = document.createElement('span')
         letterElement.innerHTML = letter.toUpperCase()
         letterElement.classList.add('letter')
@@ -82,7 +81,7 @@ const dibujarPalabra = () =>{
 
 
 const palabraAleatoria = ()=>{
-    const palabra = palabras [Math.floor((Math.random()*palabras.length))].toUpperCase()
+    var palabra = palabras [Math.floor((Math.random()*palabras.length))].toUpperCase()
     seleccionarPalabra = palabra.split ('')
 }
 
@@ -98,7 +97,7 @@ const IniciarJuego = () =>{
     dibujarAhorcado ()
     palabraAleatoria ()
     dibujarPalabra ()
-    document.addEventListener('keydown',LetraEvento)
+    document.addEventListener('keydown',letraEvento)
 }
 
 function agregarPalabras () {
