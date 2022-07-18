@@ -43,6 +43,8 @@ footer{
     text-align:center;
 }
 
+
+
 #inicio {
     background-color: #0A3871;
     flex-direction: row;
@@ -66,6 +68,86 @@ footer{
     line-height: 22px;
 
 
+}
+
+#cancelar{
+    display: none;
+    background-color: transparent;
+    flex-direction: row;
+    position: absolute;
+    padding: 24px;
+    border-radius: 24px;    
+    width: 280px;
+    height: 67px;
+    left: 700px;
+    top: 600px;   
+    gap: 8px;
+    border: 1px,solid lightblue;
+    size: 16px;
+    font-family: 'Inter';
+    font-style:normal;
+    font-weight: 400;
+    font-size: 20px;
+    color:#0A3871;
+    align-items: center;
+    text-align: center;
+    
+}
+
+#nuevo{
+    display: none;
+    background-color: #0A3871;
+    flex-direction: row;
+    position: absolute;
+    padding: 24px;
+    border-radius: 24px;    
+    width: 280px;
+    height: 67px;
+    left: 400px;
+    top: 600px;
+    gap: 8px;
+    color: azure;
+    border: 1px,solid lightblue;
+    size: 16px;
+    font-family: 'inter';
+    font-style:normal;
+    font-weight: 400;
+    font-size: 18px;
+    align-items: center;
+    text-align: center;
+    line-height: 22px;
+
+    
+}
+
+#nuevaPalabra{
+    background-color: azure;
+}
+
+#guardar{
+    display: none;
+        background-color: #0A3871;
+        flex-direction: row;
+        position: absolute;
+        padding: 24px;
+        border-radius: 24px;    
+        width: 280px;
+        height: 67px;
+        left: 400px;
+        top: 600px;
+        gap: 8px;
+        color: azure;
+        border: 1px,solid lightblue;
+        size: 16px;
+        font-family: 'inter';
+        font-style:normal;
+        font-weight: 400;
+        font-size: 18px;
+        align-items: center;
+        text-align: center;
+        line-height: 22px;
+    
+    
 }
 
 #agregar-palabra{

@@ -4,6 +4,9 @@ const palabrasUsadas = document.getElementById('letras-usadas')
 const palabras =['alura','web','programacion','javascript','html','canva','diseño','css','oracle','estudiante']
 const agregarPalabra = document.getElementById('agregar-palabra')
 const inputPalabra = document.getElementById('nuevaPalabra')
+const guardar = document.getElementById('guardar')
+const cancelar = document.getElementById('cancelar')
+const nuevo = document.getElementById('nuevo')
 
 
 let seleccionarPalabra
@@ -92,22 +95,55 @@ const IniciarJuego = () =>{
     inicio.style.display ='none'
     agregarPalabra.style.display ='none'
     inputPalabra.style.display="none"
+    guardar.style.display='none'
+    cancelar.style.display='block'
+    nuevo.style.display='block'
+
     dibujarAhorcado ()
     palabraAleatoria ()
     dibujarPalabra ()
     document.addEventListener('keydown',letraEvento)
 }
 
+
 function agregarPalabras () {
-    let palabraCapturar = document.getElementById('nuevaPalabra').value
-    palabraCapturar = palabras.push(palabraCapturar)
+   
     inputPalabra.style.display="block"
+    agregarPalabra.style.display="none"
     inicio.style.display ='none'
-    if ( palabraCapturar.length > 1 ){
-    alert (palabras[-1])
+    guardar.style.display='block'
+    cancelar.style.display='block'
+
+    
+}
+
+function guardarPalabra (){
+    let palabraCapturar = []
+    palabraCapturar = document.getElementById('nuevaPalabra').value
+    palabraCapturar = palabras.push(palabraCapturar)
+        
+
+    if (inputPalabra.value === ""){
+        IniciarJuego()     
+    }else{
+        
+    alert(inputPalabra.value)
+    console.log(palabraCapturar)
+    console.log(palabraCapturar.length)
+        
+    // if (palabraCapturar.value>1){
+    //     alert ("la nueva palabra agregada es " + palabras.pop())
+        
     }
 }
+           
+
+guardar.addEventListener('click',guardarPalabra)
 
 inicio.addEventListener('click',IniciarJuego)
 
 agregarPalabra.addEventListener('click',agregarPalabras)
+
+cancelar.addEventListener('click',function(){window.location.reload()})
+
+nuevo.addEventListener('click',IniciarJuego)
