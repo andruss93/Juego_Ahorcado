@@ -33,8 +33,6 @@ const finJuego = () => {
 }
 
 
-
-
 const letraCorrecta = letter => {
     const {children} = contenedorDePalabra
     for (var i = 0; i < children.length;i++){
@@ -103,7 +101,11 @@ const IniciarJuego = () =>{
 function agregarPalabras () {
     let palabraCapturar = document.getElementById('nuevaPalabra').value
     palabraCapturar = palabras.push(palabraCapturar)
-    alert (palabras)
+    inputPalabra.style.display="block"
+    inicio.style.display ='none'
+    if ( palabraCapturar.length > 1 ){
+    alert (palabras[-1])
+    }
 }
 
 inicio.addEventListener('click',IniciarJuego)
