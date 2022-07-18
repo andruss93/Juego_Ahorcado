@@ -57,7 +57,7 @@ footer{
     top: 402px;
     gap: 8px;
     color: azure;
-    border: 1px,solid lightblue;
+    border: solid #0A3871;
     size: 16px;
     font-family: 'inter';
     font-style:normal;
@@ -82,7 +82,7 @@ footer{
     left: 700px;
     top: 600px;   
     gap: 8px;
-    border: 1px,solid lightblue;
+    border: solid #0A3871;
     size: 16px;
     font-family: 'Inter';
     font-style:normal;
@@ -107,7 +107,7 @@ footer{
     top: 600px;
     gap: 8px;
     color: azure;
-    border: 1px,solid lightblue;
+    border:solid #0A3871;
     size: 16px;
     font-family: 'inter';
     font-style:normal;
@@ -137,7 +137,7 @@ footer{
         top: 600px;
         gap: 8px;
         color: azure;
-        border: 1px,solid lightblue;
+        border: solid #0A3871;
         size: 16px;
         font-family: 'inter';
         font-style:normal;
@@ -162,7 +162,7 @@ footer{
     left: 579px;
     top: 554px;   
     gap: 8px;
-    border: 1px,solid lightblue;
+    border: solid #0A3871;
     size: 16px;
     font-family: 'Inter';
     font-style:normal;
