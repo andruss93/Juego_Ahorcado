@@ -33,6 +33,10 @@ const letraIncorrecta = () => {
 const finJuego = () => {
     document.removeEventListener('keydown',letraEvento)
     inicio.style.display = 'block'
+    guardar.style.display='none'
+    cancelar.style.display='none'
+    nuevo.style.display='none'
+
 }
 
 

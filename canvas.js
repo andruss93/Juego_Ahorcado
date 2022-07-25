@@ -23,7 +23,7 @@ function dibujarAhorcado (){
     ctx.canvas.height = 400
     ctx.scale (40,40)
     ctx.clearRect(0,0, canvas.width, canvas.height)
-    ctx.fillStyle = 'black'
+    ctx.fillStyle = 'lightblue'
     ctx.fillRect (0,7,4,1)
     ctx.fillRect (1,0,1,8)
     ctx.fillRect (2,0,3,1)
