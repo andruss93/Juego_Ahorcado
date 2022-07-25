@@ -122,6 +122,8 @@ footer{
 
 #nuevaPalabra{
     background-color: azure;
+    border: none;
+    border: transparent;
 }
 
 #guardar{
@@ -171,6 +173,7 @@ footer{
     color:#0A3871;
     align-items: center;
     text-align: center;
+
 }
 
 .letter::after{

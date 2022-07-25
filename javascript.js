@@ -128,13 +128,13 @@ function guardarPalabra (){
         
 
     if (inputPalabra.value === ""){
-        IniciarJuego()     
+        alert("No agrego ninguna palabra")
     }else{
         
     alert(inputPalabra.value)
     console.log(palabraCapturar)
-    console.log(palabraCapturar.length)
-        
+    //console.log(palabraCapturar.length)
+    IniciarJuego()
     // if (palabraCapturar.value>1){
     //     alert ("la nueva palabra agregada es " + palabras.pop())
         
